@@ -16,6 +16,14 @@ export default class Education extends Component {
       education: [{ 'id': 3, 'field': 'physics', 'school': 'jkuat', 'certification': 'undergraduate', 'to': 2010 },
       { 'id': 5, 'field': 'engineering', 'school': 'uon', 'certification': 'undergraduate', 'to': 2009 }]
     }
+    
+    this.handleChange = this.handleChange.bind(this);
+    
+    this.deleteEducation = this.deleteEducation.bind(this);
+        
+        this.clearForm = this.clearForm.bind(this);
+    
+    this.addEducation = this.addEducation.bind(this);
   }
 
 
@@ -103,19 +111,19 @@ export default class Education extends Component {
 
           <div className="col-md-4 mb-3 mb-md-0">
             <label className="font-weight-bold" for="fullname">Field Of Study</label>
-            <input type="text" value={this.state.field} name="field" onChange={this.handleChange.bind(this)} className="form-control" placeholder="" />
+            <input type="text" value={this.state.field} name="field" onChange={this.handleChange} className="form-control" placeholder="" />
           </div>
 
 
           <div className="col-md-4 mb-3 mb-md-0">
             <label className="font-weight-bold" for="fullname">School</label>
-            <input type="text" value={this.state.school} name="school" onChange={this.handleChange.bind(this)} className="form-control" placeholder="" />
+            <input type="text" value={this.state.school} name="school" onChange={this.handleChange} className="form-control" placeholder="" />
           </div>
 
 
           <div className="col-md-4 mb-3 mb-md-0">
             <label className="font-weight-bold" for="fullname">Certification</label>
-            <input type="text" value={this.state.certification} name="certification" onChange={this.handleChange.bind(this)} className="form-control" placeholder="" />
+            <input type="text" value={this.state.certification} name="certification" onChange={this.handleChange} className="form-control" placeholder="" />
           </div>
         </div>
 
@@ -124,13 +132,13 @@ export default class Education extends Component {
 
           <div className="col-md-4 mb-3 mb-md-0">
             <label className="font-weight-bold" for="fullname">From</label>
-            <input type="date" name="from" value={this.state.from}  onChange={this.handleChange.bind(this)} className="form-control" placeholder="" />
+            <input type="date" name="from" value={this.state.from}  onChange={this.handleChange} className="form-control" placeholder="" />
           </div>
 
 
           <div className="col-md-4 mb-3 mb-md-0">
             <label className="font-weight-bold" for="fullname">To</label>
-            <input type="date" name="to" value={this.state.to} onChange={this.handleChange.bind(this)} className="form-control" placeholder="" />
+            <input type="date" name="to" value={this.state.to} onChange={this.handleChange} className="form-control" placeholder="" />
           </div>
 
 
@@ -139,13 +147,13 @@ export default class Education extends Component {
         <div className="row form-group">
           <div className="col-md-12"><h4>Specialized subjects</h4></div>
           <div className="col-md-12 mb-3 mb-md-0">
-            <textarea value={this.state.subjects} onChange={this.handleChange.bind(this)} name="subjects" className="form-control" id="" cols="30" rows="5"></textarea>
+            <textarea value={this.state.subjects} onChange={this.handleChange} name="subjects" className="form-control" id="" cols="30" rows="5"></textarea>
           </div>
         </div>
         <div className="row form-group">
           <div className="col-md-12 mb-3 mb-md-0">
-            <button onClick={this.addEducation.bind(this)} className="btn btn-primary  py-2 px-5 float-left">Save</button>
-            <button onClick={this.clearForm.bind(this)} className="btn btn-danger  py-2 px-5 float-right">Cancel</button>
+            <button onClick={this.addEducation} className="btn btn-primary  py-2 px-5 float-left">Save</button>
+            <button onClick={this.clearForm} className="btn btn-danger  py-2 px-5 float-right">Cancel</button>
           </div>
         </div>
       </div>
