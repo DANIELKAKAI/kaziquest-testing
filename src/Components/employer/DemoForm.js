@@ -21,6 +21,10 @@ export default class DemoForm extends Component {
       message: '',
       privacy: ''
     }
+    
+    this.handleChange = this.handleChange.bind(this);
+    this.submit = this.submit.bind(this);
+    this.openPopupbox = this.openPopupbox.bind(this);
   }
 
   handleChange(e) {
@@ -111,7 +115,7 @@ export default class DemoForm extends Component {
 
           <div className="col-md d-flex">
 
-            <form onSubmit={this.submit.bind(this)} className="bg-white p-5 contact-form">
+            <form onSubmit={this.submit} className="bg-white p-5 contact-form">
               <div className="col-md-12 mb-4 ">
                 <h2 className="h3">Request a Demo now</h2>
                 <p>Discover KaziQuest’s full suite of solutions. And learn in your live demo why our platform is essential for your business.</p>
@@ -121,13 +125,13 @@ export default class DemoForm extends Component {
                 <div className="col-md-6">
                   <div className="form-group">
 
-                    <input type="text" name="firstname" onChange={this.handleChange.bind(this)} className="form-control" placeholder="First Name" />
+                    <input type="text" name="firstname" onChange={this.handleChange} className="form-control" placeholder="First Name" />
                   </div>
                 </div>
 
                 <div className="col-md-6">
                   <div className="form-group">
-                    <input type="text" name="lastname" onChange={this.handleChange.bind(this)} className="form-control" placeholder="Last Name" />
+                    <input type="text" name="lastname" onChange={this.handleChange} className="form-control" placeholder="Last Name" />
                   </div>
                 </div>
 
@@ -137,7 +141,7 @@ export default class DemoForm extends Component {
                 <div className="col-md-12">
                   <div className="form-group">
 
-                    <input type="email" name="email" onChange={this.handleChange.bind(this)} className="form-control" placeholder="Email" />
+                    <input type="email" name="email" onChange={this.handleChange} className="form-control" placeholder="Email" />
                   </div>
                 </div>
               </div>
@@ -146,7 +150,7 @@ export default class DemoForm extends Component {
                 <div className="col-md-12">
                   <div className="form-group">
 
-                    <input type="number" name="phone" onChange={this.handleChange.bind(this)} className="form-control" placeholder="Phone Number" />
+                    <input type="number" name="phone" onChange={this.handleChange} className="form-control" placeholder="Phone Number" />
                   </div>
                 </div>
               </div>
@@ -155,7 +159,7 @@ export default class DemoForm extends Component {
                 <div className="col-md-12">
                   <div className="form-group">
 
-                    <input type="text" name="company" onChange={this.handleChange.bind(this)} className="form-control" placeholder="Company" />
+                    <input type="text" name="company" onChange={this.handleChange} className="form-control" placeholder="Company" />
                   </div>
                 </div>
               </div>
@@ -166,7 +170,7 @@ export default class DemoForm extends Component {
 
                     <div className="select-wrap">
                       
-                      <select name="companysize" onChange={this.handleChange.bind(this)} className="form-control">
+                      <select name="companysize" onChange={this.handleChange} className="form-control">
                         <option value="">Company Size</option>
                         <option value="1-10">1-10 employees</option>
                         <option value="11-50">11-50 employees</option>
@@ -188,7 +192,7 @@ export default class DemoForm extends Component {
               <div className="row">
                 <div className="col-md-12">
                   <div className="form-group">
-                    <textarea name="message" onChange={this.handleChange.bind(this)} cols="30" rows="7" className="form-control" placeholder="Message"></textarea>
+                    <textarea name="message" onChange={this.handleChange} cols="30" rows="7" className="form-control" placeholder="Message"></textarea>
 
                   </div>
                 </div>
@@ -200,7 +204,7 @@ export default class DemoForm extends Component {
                   <div className="form-group">
 
                     <label for="option-job-type-1">
-                      <input type="checkbox" onChange={this.handleChange.bind(this)} name="privacy" />
+                      <input type="checkbox" onChange={this.handleChange} name="privacy" />
                       I hereby confirm that I have read the <a href="/privacy-policy">Privacy Policy.</a>
                     </label>
                   </div>
