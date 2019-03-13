@@ -5,7 +5,7 @@ import SignUp from './Components/Signup.js';
 import SignIn from './Components/SignIn.js';
 import Home from './Components/home/Home.js';
 import Employer from './Components/employer/Employer';
-import { Route} from 'react-router-dom';
+import {BrowserRouter,Switch, Route} from 'react-router-dom';
 import JobPost from './Components/job/JobPost.js';
 import JobsList from './Components/job/JobsList.js';
 import SearchList from './Components/job/SearchList.js';
@@ -53,6 +53,8 @@ class App extends Component {
 
     return (
     
+      <BrowserRouter>
+<Switch>
         <div>
           <Navigation updateLogin={this.updateLogin} token={this.state.token} />
           <Route exact path="/" component={()=> <Home categories={this.state.categories} job_types={this.state.job_types} />} />
@@ -67,6 +69,8 @@ class App extends Component {
           <Route path="/new-job" component={() => <NewJob categories={this.state.categories} token={this.state.token} job_types={this.state.job_types} />}/>
           <Footer/>
         </div>
+    </Switch>
+</BrowserRouter>
     
 
 
