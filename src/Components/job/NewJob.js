@@ -29,6 +29,10 @@ class NewJob extends Component {
 		}
 		this.handleEditorChange = this.handleEditorChange.bind(this);
 		this.handleEditorChange2 = this.handleEditorChange2.bind(this);
+		this.handleChange = this.handleChange.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
+    
+    
 	}
 
 	handleEditorChange(content) {
@@ -133,7 +137,7 @@ class NewJob extends Component {
 						<div className="col-md-12 col-lg-8 mb-5">
 
 
-							<form onSubmit={this.handleSubmit.bind(this)} className="p-5 bg-white">
+							<form onSubmit={this.handleSubmit} className="p-5 bg-white">
 								<div className="row form-group">
 									<h2>New Job</h2>
 								</div>
@@ -142,14 +146,14 @@ class NewJob extends Component {
 								<div className="row form-group">
 									<div className="col-md-12 mb-3 mb-md-0">
 										<label className="font-weight-bold" >Job Title</label>
-										<input type="text" onChange={this.handleChange.bind(this)} name="job_title" className="form-control" placeholder="eg. Professional UI/UX Designer" />
+										<input type="text" onChange={this.handleChange} name="job_title" className="form-control" placeholder="eg. Professional UI/UX Designer" />
 									</div>
 								</div>
 
 								<div className="row form-group mb-5">
 									<div className="col-md-12 mb-3 mb-md-0">
 										<label className="font-weight-bold" >Company</label>
-										<input type="text" onChange={this.handleChange.bind(this)} name="company" className="form-control" placeholder="eg. Facebook, Inc." />
+										<input type="text" onChange={this.handleChange} name="company" className="form-control" placeholder="eg. Facebook, Inc." />
 									</div>
 								</div>
 
@@ -158,7 +162,7 @@ class NewJob extends Component {
 
 									<div className="col-md-12 mb-3 mb-md-0">
 										<label className="font-weight-bold" >Location</label>
-										<input type="text" onChange={this.handleChange.bind(this)} name="location" className="form-control" placeholder="Kenya" />
+										<input type="text" onChange={this.handleChange} name="location" className="form-control" placeholder="Kenya" />
 									</div>
 								</div>
 
@@ -167,7 +171,7 @@ class NewJob extends Component {
 									<div className="col-md-12 mb-3 mb-md-0">
 
 										<label className="font-weight-bold" >Experience</label>
-										<input type="number" onChange={this.handleChange.bind(this)} name="experience" className="form-control" placeholder="1" />
+										<input type="number" onChange={this.handleChange} name="experience" className="form-control" placeholder="1" />
 									</div>
 								</div>
 
@@ -176,13 +180,13 @@ class NewJob extends Component {
 									<div className="col-md-6 mb-3 mb-md-0">
 
 										<label className="font-weight-bold" >Min salary</label>
-										<input type="number" onChange={this.handleChange.bind(this)} name="lowest_salary" className="form-control" placeholder="0" />
+										<input type="number" onChange={this.handleChange} name="lowest_salary" className="form-control" placeholder="0" />
 									</div>
 
 									<div className="col-md-6 mb-3 mb-md-0">
 
 										<label className="font-weight-bold" >Max salary</label>
-										<input type="number" onChange={this.handleChange.bind(this)} name="highest_salary" className="form-control" placeholder="0" />
+										<input type="number" onChange={this.handleChange} name="highest_salary" className="form-control" placeholder="0" />
 									</div>
 
 								</div>
@@ -194,7 +198,7 @@ class NewJob extends Component {
 									<div className="col-md-12 mb-3 mb-md-0">
 
 										<label className="font-weight-bold" >Job Type</label>
-										<select onChange={this.handleChange.bind(this)} name="job_type" className="form-control">
+										<select onChange={this.handleChange} name="job_type" className="form-control">
 
 										<option value="">Choose</option>
 											{job_types}
@@ -210,7 +214,7 @@ class NewJob extends Component {
 									<div className="col-md-12 mb-3 mb-md-0">
 
 										<label className="font-weight-bold" >Category</label>
-										<select onChange={this.handleChange.bind(this)} name="category" className="form-control">
+										<select onChange={this.handleChange} name="category" className="form-control">
 			
 										<option value="">Choose</option>
 											{categories}
