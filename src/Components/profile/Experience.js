@@ -16,6 +16,18 @@ export default class Experience extends Component {
             companyenddate: '', currentjob: false, jobdescription: '',  companystartdate: '',
             companySize: ''
         };
+        
+        this.handleChange = this.handleChange.bind(this);
+    
+    this.saveInfo = this.saveInfo.bind(this);
+        
+        this.clearJobForm = this.clearJobForm.bind(this);
+        
+        this.deleteJob = this.deleteJob.bind(this);
+    
+    this.addJob = this.addJob.bind(this);
+        
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
 
@@ -122,11 +134,11 @@ export default class Experience extends Component {
 
 
                         <label className="font-weight-bold" for="fullname">Position</label>
-                        <input value={this.state.position} onChange={this.handleChange.bind(this)} type="text" name="position" className="form-control" placeholder="position" />
+                        <input value={this.state.position} onChange={this.handleChange} type="text" name="position" className="form-control" placeholder="position" />
 
 
                         <label className="font-weight-bold" for="fullname">Job Type</label>
-                        <select value={this.state.job_type} name="job_type" onChange={this.handleChange.bind(this)} className="form-control">
+                        <select value={this.state.job_type} name="job_type" onChange={this.handleChange} className="form-control">
                             <option value="">Choose</option>
                             {job_types}
                         </select>
@@ -137,10 +149,10 @@ export default class Experience extends Component {
                     <div className="col-md-4 mb-3 mb-md-0">
 
                         <label className="font-weight-bold" for="fullname">Company</label>
-                        <input type="text" value={this.state.company} onChange={this.handleChange.bind(this)} name="company" className="form-control" placeholder="" />
+                        <input type="text" value={this.state.company} onChange={this.handleChange} name="company" className="form-control" placeholder="" />
 
                         <label className="font-weight-bold" for="fullname">Company size</label>
-                        <select value={this.state.companySize} onChange={this.handleChange.bind(this)} name="companySize" className="form-control">
+                        <select value={this.state.companySize} onChange={this.handleChange} name="companySize" className="form-control">
                             <option value="">Choose</option>
                             <option value="1-10">1-10 employees</option>
                             <option value="11-50">11-50 employees</option>
@@ -157,10 +169,10 @@ export default class Experience extends Component {
                     <div className="col-md-4 mb-3 mb-md-0">
 
                         <label className="font-weight-bold" for="fullname">Company homepage</label>
-                        <input type="text" value={this.state.companyhomepage} onChange={this.handleChange.bind(this)} name="companyhomepage" className="form-control" placeholder="" />
+                        <input type="text" value={this.state.companyhomepage} onChange={this.handleChange} name="companyhomepage" className="form-control" placeholder="" />
 
                         <label className="font-weight-bold" for="fullname">Industry</label>
-                        <select value={this.state.industry} onChange={this.handleChange.bind(this)} name="industry" className="form-control">
+                        <select value={this.state.industry} onChange={this.handleChange} name="industry" className="form-control">
                             <option value="">Choose</option>
                             {categories}
                         </select>
@@ -174,16 +186,16 @@ export default class Experience extends Component {
                     <div className="col-md-4 mb-3 mb-md-0">
 
                         <label className="font-weight-bold" for="fullname">From</label>
-                        <input type="date" value={this.state.companystartdate} onChange={this.handleChange.bind(this)}  name="companystartdate" id="fullname" className="form-control" placeholder="" />
+                        <input type="date" value={this.state.companystartdate} onChange={this.handleChange}  name="companystartdate" id="fullname" className="form-control" placeholder="" />
                     </div>
                     <div className="col-md-4 mb-3 mb-md-0">
 
                         <label className="font-weight-bold" for="fullname">To</label>
-                        <input type="date" value={this.state.companyenddate} onChange={this.handleChange.bind(this)} name="companyenddate" className="form-control" placeholder="" />
+                        <input type="date" value={this.state.companyenddate} onChange={this.handleChange} name="companyenddate" className="form-control" placeholder="" />
                     </div>
                     <div className="col-md-4 mb-3 mb-md-0">
 
-                        <input type="radio" onChange={this.handleChange.bind(this)} name="currentjob" id="option-job-type-1" />
+                        <input type="radio" onChange={this.handleChange} name="currentjob" id="option-job-type-1" />
                         <label>Current Job</label>
 
                     </div>
@@ -193,14 +205,14 @@ export default class Experience extends Component {
                 <div className="row form-group">
                     <div className="col-md-12"><h4>Job Description</h4></div>
                     <div className="col-md-12 mb-3 mb-md-0">
-                        <textarea value={this.state.jobdescription} onChange={this.handleChange.bind(this)} name="jobdescription" className="form-control" id="" cols="30" rows="5"></textarea>
+                        <textarea value={this.state.jobdescription} onChange={this.handleChange} name="jobdescription" className="form-control" id="" cols="30" rows="5"></textarea>
                     </div>
                 </div>
 
                 <div className="row form-group">
                     <div className="col-md-12 mb-3 mb-md-0">
-                        <button onClick={this.addJob.bind(this)} className="btn btn-primary  py-2 px-5 float-left">Save</button>
-                        <button onClick={this.clearJobForm.bind(this)} className="btn btn-danger  py-2 px-5 float-right">Cancel</button>
+                        <button onClick={this.addJob} className="btn btn-primary  py-2 px-5 float-left">Save</button>
+                        <button onClick={this.clearJobForm} className="btn btn-danger  py-2 px-5 float-right">Cancel</button>
                     </div>
                 </div>
             </div>
