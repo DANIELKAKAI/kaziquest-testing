@@ -54,10 +54,10 @@ class App extends Component {
     return (
     
         <div>
-          <Navigation updateLogin={this.updateLogin.bind(this)} token={this.state.token} />
+          <Navigation updateLogin={this.updateLogin} token={this.state.token} />
           <Route exact path="/" component={()=> <Home categories={this.state.categories} job_types={this.state.job_types} />} />
-          <Route exact path="/signup" component={()=> <SignUp updateLogin={this.updateLogin.bind(this)} />} />
-          <Route exact path="/signin" component={()=> <SignIn updateLogin={this.updateLogin.bind(this)} />} />
+          <Route exact path="/signup" component={()=> <SignUp updateLogin={this.updateLogin} />} />
+          <Route exact path="/signin" component={()=> <SignIn updateLogin={this.updateLogin} />} />
           <Route exact path="/employer" component={()=> <Employer/>} />
           <Route exact path="/privacy-policy" component={()=> <PrivacyPolicy/>} />
           <Route path="/job-post/:id-:title?" render={(props) => <JobPost {...props} categories={this.state.categories} />} />
