@@ -14,6 +14,10 @@ class SignUp extends Component {
       password:'',
       c_password:''
     }
+    
+    this.handleChange = this.handleChange.bind(this);
+    
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e){
@@ -98,7 +102,7 @@ class SignUp extends Component {
 
                     <div className="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
 
-                      <form onSubmit={this.handleSubmit.bind(this)} className="search-job">
+                      <form onSubmit={this.handleSubmit} className="search-job">
                         <div className="col-md-12 mb-4 text-center ">
                           <h2 className="h3">Sign Up</h2>
                         </div>
@@ -108,7 +112,7 @@ class SignUp extends Component {
                             <div className="form-group">
                               <div className="form-field">
                                 <div className="icon"><span className="icon-user"></span></div>
-                                <input type="text" onChange={this.handleChange.bind(this)} name="name" className="form-control" placeholder="Name" />
+                                <input type="text" onChange={this.handleChange} name="name" className="form-control" placeholder="Name" />
                               </div>
                             </div>
                           </div>
@@ -120,7 +124,7 @@ class SignUp extends Component {
                             <div className="form-group">
                               <div className="form-field">
                                 <div className="icon"><span className="icon-briefcase"></span></div>
-                                <input type="text" onChange={this.handleChange.bind(this)} name="email" className="form-control" placeholder="Email" />
+                                <input type="text" onChange={this.handleChange} name="email" className="form-control" placeholder="Email" />
                               </div>
                             </div>
                           </div>
@@ -133,7 +137,7 @@ class SignUp extends Component {
                             <div className="form-group">
                               <div className="form-field">
                                 <div className="icon"><span className="icon-map-marker"></span></div>
-                                <input type="password" onChange={this.handleChange.bind(this)} name="password" className="form-control" placeholder="password" />
+                                <input type="password" onChange={this.handleChange} name="password" className="form-control" placeholder="password" />
                               </div>
                             </div>
                           </div>
@@ -144,7 +148,7 @@ class SignUp extends Component {
                             <div className="form-group">
                               <div className="form-field">
                                 <div className="icon"><span className="icon-map-marker"></span></div>
-                                <input type="password" onChange={this.handleChange.bind(this)} name="c_password" className="form-control" placeholder="repeat password" />
+                                <input type="password" onChange={this.handleChange} name="c_password" className="form-control" placeholder="repeat password" />
                               </div>
                             </div>
                           </div>
