@@ -18,6 +18,15 @@ export default class PersonalInfo extends Component{
             city:'',
             pic:Pic,
         }
+        
+        this.handleChange = this.handleChange.bind(this);
+    
+        this.imageChange = this.imageChange.bind(this);
+    
+    this.updateProfile = this.updateProfile.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    
+   
     }
     
 
@@ -58,19 +67,19 @@ export default class PersonalInfo extends Component{
   
               <div className="col-md-12 col-lg-12 mb-5">
   
-                <form onSubmit={this.handleSubmit.bind(this)} className="p-5 bg-white">
+                <form onSubmit={this.handleSubmit} className="p-5 bg-white">
   
   
                   <div className="row form-group">
                     <div className="col-md-4 mb-3 mb-md-0">
                       <img src={this.state.pic} width="150px" height="150px" alt="profile pic" />
   
-                      <input type="file" name="pic" onChange={this.imageChange.bind(this)} placeholder="upload image" alt="Submit" />
+                      <input type="file" name="pic" onChange={this.imageChange} placeholder="upload image" alt="Submit" />
                     </div>
   
                     <div className="col-md-4 mb-3 mb-md-0">
                       <label className="font-weight-bold" >Gender</label>
-                      <select name="gender" onChange={this.handleChange.bind(this)} value={this.state.gender} className="form-control">
+                      <select name="gender" onChange={this.handleChange} value={this.state.gender} className="form-control">
                         <option value="">Choose</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
@@ -79,26 +88,26 @@ export default class PersonalInfo extends Component{
                       </select>
   
                       <label className="font-weight-bold" >First name</label>
-                      <input type="text" value={this.state.firstname} onChange={this.handleChange.bind(this)} name="firstname" className="form-control" placeholder="" />
+                      <input type="text" value={this.state.firstname} onChange={this.handleChange} name="firstname" className="form-control" placeholder="" />
                       <label className="font-weight-bold" >Last name</label>
-                      <input type="text" value={this.state.lastname} onChange={this.handleChange.bind(this)} name="lastname" className="form-control" placeholder="" />
+                      <input type="text" value={this.state.lastname} onChange={this.handleChange} name="lastname" className="form-control" placeholder="" />
   
                     </div>
   
                     <div className="col-md-4 mb-3 mb-md-0">
   
                       <label className="font-weight-bold" >Email</label>
-                      <input type="text" value={this.state.email} onChange={this.handleChange.bind(this)} name="email" className="form-control" placeholder="" />
+                      <input type="text" value={this.state.email} onChange={this.handleChange} name="email" className="form-control" placeholder="" />
   
                       <label className="font-weight-bold" >Phone</label>
-                      <input type="number" value={this.state.phone} onChange={this.handleChange.bind(this)} name="phone" className="form-control" placeholder="" />
+                      <input type="number" value={this.state.phone} onChange={this.handleChange} name="phone" className="form-control" placeholder="" />
   
   
                       <label className="font-weight-bold" >City</label>
-                      <input type="text" value={this.state.city} onChange={this.handleChange.bind(this)} name="city" className="form-control" placeholder="" />
+                      <input type="text" value={this.state.city} onChange={this.handleChange} name="city" className="form-control" placeholder="" />
   
                       <label className="font-weight-bold" >Country</label>
-                      <input type="text" value={this.state.country} onChange={this.handleChange.bind(this)} name="country" className="form-control" placeholder="" />
+                      <input type="text" value={this.state.country} onChange={this.handleChange} name="country" className="form-control" placeholder="" />
   
                     </div>
   
@@ -106,7 +115,7 @@ export default class PersonalInfo extends Component{
 
                   <div className="row form-group">
                   <div className="col-md-12 mb-3 mb-md-0">
-                    <button onClick={this.updateProfile.bind(this)} className="btn btn-primary  py-2 px-5 float-right">Save</button>
+                    <button onClick={this.updateProfile} className="btn btn-primary  py-2 px-5 float-right">Save</button>
                   </div>
                 </div>
   
