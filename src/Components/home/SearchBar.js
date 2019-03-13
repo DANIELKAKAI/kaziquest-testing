@@ -11,6 +11,9 @@ class SearchBar extends Component{
 			location:'',
 			category:''
 		}
+		
+		this.handleChange = this.handleChange.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
 	handleChange(e){
@@ -57,13 +60,13 @@ class SearchBar extends Component{
 
 			              <div className="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
 
-			              	<form onSubmit={this.handleSubmit.bind(this)} className="search-job">
+			              	<form onSubmit={this.handleSubmit} className="search-job">
 			              		<div className="row">
 			              			<div className="col-md">
 			              				<div className="form-group">
 				              				<div className="form-field">
 				              					<div className="icon"><span className="icon-briefcase"></span></div>
-								                <input type="text" name="keyword" onChange={this.handleChange.bind(this)} className="form-control" placeholder="eg. Job Title ,Keywords or Company"/>
+								                <input type="text" name="keyword" onChange={this.handleChange} className="form-control" placeholder="eg. Job Title ,Keywords or Company"/>
 								              </div>
 							              </div>
 			              			</div>
@@ -72,7 +75,7 @@ class SearchBar extends Component{
 			              					<div className="form-field">
 				              					<div className="select-wrap">
 						                      <div className="icon"><span className="ion-ios-arrow-down"></span></div>
-						                      <select onChange={this.handleChange.bind(this)} name="profession" id="" className="form-control">
+						                      <select onChange={this.handleChange} name="profession" id="" className="form-control">
 																	<option value="">Category</option>
 						                      	{categories}
 						                      </select>
@@ -84,7 +87,7 @@ class SearchBar extends Component{
 			              				<div className="form-group">
 			              					<div className="form-field">
 				              					<div className="icon"><span className="icon-map-marker"></span></div>
-								                <input onChange={this.handleChange.bind(this)} name="location" type="text" className="form-control" placeholder="Location"/>
+								                <input onChange={this.handleChange} name="location" type="text" className="form-control" placeholder="Location"/>
 								              </div>
 							              </div>
 			              			</div>
