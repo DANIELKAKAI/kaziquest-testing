@@ -9,6 +9,10 @@ export default class Subscribe extends Component {
     this.state={
       email:''
     }
+    
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    
   }
 
   handleChange(e){
@@ -61,9 +65,9 @@ export default class Subscribe extends Component {
                 <p>Subcribe for daily job alerts from KaziQuest. It's all free! We promise no spam.</p>
                 <div className="row d-flex justify-content-center mt-4 mb-4">
                   <div className="col-md-8">
-                    <form onSubmit={this.handleSubmit.bind(this)}  className="subscribe-form">
+                    <form onSubmit={this.handleSubmit}  className="subscribe-form">
                       <div className="form-group d-flex">
-                        <input type="text" ref="email" onChange={this.handleChange.bind(this)} className="form-control" placeholder="Enter email address" />
+                        <input type="text" ref="email" onChange={this.handleChange} className="form-control" placeholder="Enter email address" />
                         <input type="submit" value="Subscribe" className="submit px-3" />
                       </div>
                     </form>
