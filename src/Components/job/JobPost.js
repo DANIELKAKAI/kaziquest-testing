@@ -13,6 +13,12 @@ export default class JobPost extends Component {
             id: props.match.params.id,
             search: ''
         }
+        
+        this.handleChange = this.handleChange.bind(this);
+    
+    this.handleSearch = this.handleSearch.bind(this);
+        
+        this.handleSubscribe = this.handleSubsribe.bind(this);
     }
 
     componentWillMount() {
@@ -223,10 +229,10 @@ export default class JobPost extends Component {
                             </div>
                             <div className="col-md-4 sidebar bg-light">
                                 <div className="sidebar-box">
-                                    <form onSubmit={this.handleSearch.bind(this)} className="search-form">
+                                    <form onSubmit={this.handleSearch} className="search-form">
                                         <div className="form-group">
                                             <span className="icon icon-search"></span>
-                                            <input type="text" onChange={this.handleChange.bind(this)} name="search" className="form-control" placeholder="Type a keyword and hit enter" />
+                                            <input type="text" onChange={this.handleChange} name="search" className="form-control" placeholder="Type a keyword and hit enter" />
                                         </div>
                                     </form>
                                 </div>
@@ -244,11 +250,11 @@ export default class JobPost extends Component {
                                 <div className="sidebar-box subscribe-box">
                                     <h3>Get Daily Job Alerts</h3>
                                     <p>Subcribe for daily job alerts from KaziQuest. It's all free! We promise no spam.</p>
-                                    <form onSubmit={this.handleSubscribe.bind(this)} className="search-form">
+                                    <form onSubmit={this.handleSubscribe} className="search-form">
                                         <div className="form-group">
 
                                             <span className="icon icon-email"></span>
-                                            <input type="text" name="email" onChange={this.handleChange.bind(this)} className="form-control" placeholder="Enter Email" />
+                                            <input type="text" name="email" onChange={this.handleChange} className="form-control" placeholder="Enter Email" />
 
                                         </div>
                                         <div className="form-group">
