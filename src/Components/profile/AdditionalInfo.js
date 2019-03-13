@@ -21,6 +21,11 @@ export default class AdditionalInfo extends Component {
 
         }
 
+         this.handleChange = this.handleChange.bind(this);
+    
+    this.saveInfo = this.saveInfo.bind(this);
+        
+        this.clearForm = this.clearForm.bind(this);
 
 
     }
@@ -80,11 +85,11 @@ export default class AdditionalInfo extends Component {
                 <div className="row form-group">
                     <div className="col-md-12"><h4>Cover letter</h4></div>
                     <div className="col-md-12 mb-3 mb-md-0">
-                        <textarea name="coverletter" onChange={this.handleChange.bind(this)} className="form-control" id="" cols="30" rows="5"></textarea>
+                        <textarea name="coverletter" onChange={this.handleChange} className="form-control" id="" cols="30" rows="5"></textarea>
                     </div>
                     <div className="col-md-4 mb-3 mb-md-0">
                         <h4>Upload resume</h4>
-                        <input type="file" onChange={this.handleChange.bind(this)} name="resume" placeholder="Upload resume" />
+                        <input type="file" onChange={this.handleChange} name="resume" placeholder="Upload resume" />
                     </div>
 
                     <div className="col-md-12 mb-3 mb-md-0">
@@ -92,7 +97,7 @@ export default class AdditionalInfo extends Component {
                         <div className="row form-group">
                             <div className="col-md-4 mb-3 mb-md-0">
                                 <label className="font-weight-bold" for="fullname">Languages</label>
-                                <select onChange={this.handleChange.bind(this)} name="language"  className="form-control">
+                                <select onChange={this.handleChange} name="language"  className="form-control">
                                     <option value="">Languages</option>
                                     <option value="English">English</option>
                                     <option value="French">French</option>
@@ -103,7 +108,7 @@ export default class AdditionalInfo extends Component {
                             </div>
                             <div className="col-md-4 mb-3 mb-md-0">
                                 <label className="font-weight-bold" for="fullname">Proficiency</label>
-                                <select name="proficiency" onChange={this.handleChange.bind(this)}  className="form-control">
+                                <select name="proficiency" onChange={this.handleChange}  className="form-control">
                                     <option value="">Choose</option>
                                     <option value="Basic knowledge">Basic knowledge</option>
                                     <option value="Good knowledge">Good knowledge</option>
@@ -122,21 +127,21 @@ export default class AdditionalInfo extends Component {
                 <div className="row form-group">
                     <div className="col-md-4 mb-3 mb-md-0">
                         <label className="font-weight-bold" for="fullname">Im interested in</label>
-                        <select name="interest" onChange={this.handleChange.bind(this)} className="form-control">
+                        <select name="interest" onChange={this.handleChange} className="form-control">
                             <option value="">Choose</option>
                             {categories}
 
                         </select>
 
                         <label className="font-weight-bold" for="fullname">My professional level</label>
-                        <select name="professional" onChange={this.handleChange.bind(this)} className="form-control">
+                        <select name="professional" onChange={this.handleChange} className="form-control">
                             <option value="">Choose</option>
                             {job_types}
 
                         </select>
 
                         <label className="font-weight-bold" for="fullname">I'm willing to relocate</label>
-                        <select name="relocate" onChange={this.handleChange.bind(this)} className="form-control">
+                        <select name="relocate" onChange={this.handleChange} className="form-control">
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
                         </select>
@@ -145,8 +150,8 @@ export default class AdditionalInfo extends Component {
                 </div>
                 <div className="row form-group">
                   <div className="col-md-12 mb-3 mb-md-0">
-                    <button onClick={this.saveInfo.bind(this)} className="btn btn-primary  py-2 px-5 float-left">Save</button>
-                    <button onClick={this.clearForm.bind(this)} className="btn btn-danger  py-2 px-5 float-right">Cancel</button>
+                    <button onClick={this.saveInfo} className="btn btn-primary  py-2 px-5 float-left">Save</button>
+                    <button onClick={this.clearForm} className="btn btn-danger  py-2 px-5 float-right">Cancel</button>
                   </div>
                 </div>
             </div>
