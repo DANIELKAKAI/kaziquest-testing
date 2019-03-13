@@ -29,6 +29,8 @@ class App extends Component {
       job_types: JOB_TYPES
 
     };
+    
+    this.updateLogin = this.updateLogin.bind(this);
   }
 
   updateLogin(auth){
