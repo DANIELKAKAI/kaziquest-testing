@@ -21,6 +21,10 @@ export default class ProfileForm extends Component {
       { 'field': 'engineering', 'school': 'uon', 'certification': 'undergraduate', 'date': 2009 }],
       job: { 'id': null, 'position': null, 'career': null, 'company': null, 'date': null }
     };
+    
+    this.handleSubmit = this.handleSubmit.bind(this);
+    
+   
   }
 
    
@@ -56,7 +60,7 @@ export default class ProfileForm extends Component {
 
             <div className="col-md-12 col-lg-12 mb-5">
 
-              <form onSubmit={this.handleSubmit.bind(this)} className="p-5 bg-white">
+              <form onSubmit={this.handleSubmit} className="p-5 bg-white">
 
                 <Experience categories={this.state.categories} job_types={this.state.job_types} />
 
